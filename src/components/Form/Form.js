@@ -15,27 +15,23 @@ const StyledInput = styled.input`
   ::placeholder{
     color:${({ theme }) => theme.primaryColor};
   }
-  :focus{
+  :focus,
+  :not(:placeholder-shown) {
     border-bottom: 2px solid #ff9912;
     background-color: rgba(255,255,255,.1);
   }
 
+  :focus + label,
   :not(:placeholder-shown) + label{
     top:-16px; 
     color:#ff9912;
-  };
-
-  :not(:placeholder-shown) ~ button {
-    background-color: #ff9912;
-  };
-
-  :focus + label{
-    top:-16px; 
-    color:#ff9912;
   }
-  :focus ~ button{
+
+  :focus ~ button,
+  :not(:placeholder-shown) ~ button{
     background-color: #ff9912;
   }
+  
   padding:0 10px;
 `
 
