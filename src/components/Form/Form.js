@@ -43,6 +43,9 @@ const StyledLabel = styled.label`
   transition: .5s;
   pointer-events:none;
   font-size:1.6rem;
+  @media(max-width:440px){
+    display:none;
+  }
 `
 
 const StyledForm = styled.form` 
